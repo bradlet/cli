@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import chalk from 'chalk';
 import fs from 'fs-extra';
 import path from 'path';
 import yargs from 'yargs/yargs';
@@ -31,6 +32,16 @@ function setupServiceSchemaHandler(args: setupServiceSchemaHandlerArgs) {
 function testHandler() {
   console.log('Test handler');
 }
+
+console.log(`
+Welcome to ${chalk.cyan('ATC')}.......
+
+       __|__
+--o--o--(_)--o--o--
+
+${chalk.greenBright('***Engines engaged***')}
+------------------------------------
+`);
 
 // Configure yargs for CLI app
 yargs(hideBin(process.argv))
