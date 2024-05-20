@@ -2,9 +2,9 @@
   "name": "@bradlet/bradlet-cli",
   "version": "1.0.0",
   "description": "My personal CLI",
-  "main": "index.js",
+  "main": "cli.js",
   "bin": {
-    "bradlet-cli": "./index.js"
+    "bradlet-cli": "./cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

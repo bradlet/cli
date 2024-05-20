@@ -3,6 +3,7 @@
 // import fs from "fs";
 // import path from "path";
 import yargs from "yargs/yargs";
+import { hideBin } from "yargs/helpers";
 
 console.log("Hello npx test!");
 
@@ -17,15 +18,20 @@ console.log("Hello npx test!");
 //     }
 // });
 
-const argv = yargs(process.argv.slice(2))
-    .options({
-        a: { type: "boolean", default: false },
-        b: { type: "string", demandOption: true },
-        c: { type: "number", alias: "chill" },
-        d: { type: "array" },
-        e: { type: "count" },
-        f: { choices: ["1", "2", "3"] },
-    })
-    .parse();
+function getServiceSchemaHandler() {
+    console.log("Test handler");
+}
+
+// Configure yargs
+const argv = yargs(hideBin(process.argv))
+  .command(
+    'get-service-schema', // Command name
+    'Fetch the service schema', // Command description
+    () => {}, // Builder function (no options for now)
+    getServiceSchemaHandler // Handler function
+  )
+  .demandCommand(1, 'You need at least one command to run this tool')
+  .help()
+  .parse()
 
 console.log(argv);
