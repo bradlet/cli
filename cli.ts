@@ -34,13 +34,13 @@ function testHandler() {
 }
 
 console.log(`
-Welcome to ${chalk.cyan('ATC')}.......
 #############################################
+Welcome to ${chalk.cyan('ATC')}.......
 
        ${chalk.cyan('__|__')}
 ${chalk.cyan('--o--o--(_)--o--o--')}
 
-${chalk.greenBright('***Line up and wait***')}
+${chalk.greenBright('***Line up and wait...***')}
 ##############################################
 `);
 
