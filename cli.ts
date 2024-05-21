@@ -35,19 +35,20 @@ function testHandler() {
 
 console.log(`
 Welcome to ${chalk.cyan('ATC')}.......
+#############################################
 
-       __|__
---o--o--(_)--o--o--
+       ${chalk.cyan('__|__')}
+${chalk.cyan('--o--o--(_)--o--o--')}
 
-${chalk.greenBright('***Engines engaged***')}
-------------------------------------
+${chalk.greenBright('***Line up and wait***')}
+##############################################
 `);
 
 // Configure yargs for CLI app
 yargs(hideBin(process.argv))
   .command(
     'echo',
-    'basically my test function',
+    chalk.green('basically my test function'),
     {
       e: {
         alias: 'echo',
@@ -69,5 +70,6 @@ yargs(hideBin(process.argv))
     },
     setupServiceSchemaHandler,
   )
-  .demandCommand(1, 'You need at least one command to run this tool')
-  .help().argv; // Return the argv object so this doesn't get optimized away.
+  .demandCommand(1, chalk.red('You need at least one command to run this tool'))
+  .help()
+  .parse(); // Return the argv object so this doesn't get optimized away.
