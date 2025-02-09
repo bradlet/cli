@@ -6,3 +6,6 @@ Note: even though this is a personal CLI, it is a user-scoped public project.
 Published to the npm registry via:
 
 > npm publish --access public
+
+
+** Note to self: ** Merge this into `personal-tools`
